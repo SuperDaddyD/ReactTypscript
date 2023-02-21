@@ -19,6 +19,7 @@ function App() {
 
   //HOW TO ADD TYPESCRIPT TO STATE!!
   //BELOW IS IMPLEMENTING AND OVERIDING THE "INFERED" TYPE AND DEFININIG AN OVERIDING CUSTOM TYPE OF array of people
+  //AND SETTING INITIAL STATE TO EMPTY ARRAY!
   const [people, setPeople] = useState<IState["people"]>([]);
   people.map((peep) => console.log(peep.name));
   return (
