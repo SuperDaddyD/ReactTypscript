@@ -4,6 +4,8 @@ import "./App.css";
 import List from "./components/List";
 import AddToList from "./components/AddToList";
 
+//THIS WAS THE BEST TUTORIAL ON TYPESCRIPT I HAVE EVER SEEN!!!
+//https://www.youtube.com/watch?v=jrKcJxF0lAU&t=573s
 
 //NOTICE THIS IS OUTSIDE THE ACTUAL APP!!!
 //THIS IS BEST PRACTICE SO YOU CAN USE IT IN A CHILD COMPONENT ANYWHERE!!
@@ -19,7 +21,6 @@ export interface IState {
 function App() {
   //HOW TO ADD TYPESCRIPT TO STATE!!
   //BELOW IS TYPE DEFINTION
-
 
   //Above Notice you must read from end to top NOT TOP TO END!! READ ARRAY OF OBJECTS CALLED PEOPLE!!!
 
@@ -42,7 +43,7 @@ function App() {
     <div className="App">
       <h1>People Invited To Our Party</h1>
       <List people={people} />
-      <AddToList people={people} setPeople={setPeople}/>
+      <AddToList people={people} setPeople={setPeople} />
     </div>
   );
 }
