@@ -1,5 +1,10 @@
 import React from "react";
 
+//BELOW YOU CAN DECLARE THE "IProps" interface TWO different ways!!!
+// import { IState as IProps } from "../App";
+
+
+
 interface IProps {
   people: {
     name: string;

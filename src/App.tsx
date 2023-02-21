@@ -4,18 +4,22 @@ import "./App.css";
 import List from "./components/List";
 import AddToList from "./components/AddToList";
 
+
+//NOTICE THIS IS OUTSIDE THE ACTUAL APP!!!
+//THIS IS BEST PRACTICE SO YOU CAN USE IT IN A CHILD COMPONENT ANYWHERE!!
+export interface IState {
+  people: {
+    name: string;
+    url: string;
+    age: number;
+    note?: string;
+  }[];
+}
+
 function App() {
   //HOW TO ADD TYPESCRIPT TO STATE!!
   //BELOW IS TYPE DEFINTION
 
-  interface IState {
-    people: {
-      name: string;
-      url: string;
-      age: number;
-      note?: string;
-    }[];
-  }
 
   //Above Notice you must read from end to top NOT TOP TO END!! READ ARRAY OF OBJECTS CALLED PEOPLE!!!
 
@@ -38,7 +42,7 @@ function App() {
     <div className="App">
       <h1>People Invited To Our Party</h1>
       <List people={people} />
-      <AddToList/>
+      <AddToList people={people} setPeople={setPeople}/>
     </div>
   );
 }
